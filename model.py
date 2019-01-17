@@ -6,7 +6,7 @@ import numpy as np
 
 from tensorlayer.layers import *
 def u_net(x, is_train=False, reuse=False, n_out=1):
-    _, nx, ny, nz = x.get_shape().as_list()
+    _, nx, ny, nz = x.get_shape().as_list()                  #get_shape
     with tf.variable_scope("u_net", reuse=reuse):
         tl.layers.set_name_reuse(reuse)
         inputs = InputLayer(x, name='inputs')
